@@ -1,0 +1,14 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Codigo\personaje.cs">
+    <Files>
+      <File FileName="Assets\Codigo\Scroll\generadorniveles.cs" Line="66" Column="41" />
+      <File FileName="Assets\Codigo\personaje.cs" Line="79" Column="22" />
+      <File FileName="Assets\Codigo\Playboton.cs" Line="18" Column="32" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

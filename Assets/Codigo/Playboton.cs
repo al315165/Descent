@@ -9,12 +9,12 @@ public class Playboton : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake () {
-		codigoPersonaje = GameObject.Find ("Personaje").GetComponent<personaje> ();
+		codigoPersonaje = GameObject.FindGameObjectWithTag ("Player").GetComponent<personaje> ();
 		
 	}
 	
 	void OnMouseDown(){
-		codigoPersonaje.velocidad = 3;
+		codigoPersonaje.velocidad = 6;
 		codigoPersonaje.posicion = 1;
 		this.gameObject.SetActive (false);
 	}

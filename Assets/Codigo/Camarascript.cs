@@ -9,7 +9,7 @@ public class Camarascript : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake () {
-		Personaje = GameObject.Find ("Personaje");
+		Personaje = GameObject.FindGameObjectWithTag ("Player");
 		codigoPersonaje = Personaje.GetComponent<personaje> ();
 	}
 	
