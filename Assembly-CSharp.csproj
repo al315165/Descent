@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{2D5F8509-1143-5018-3836-F86F005419F3}</ProjectGuid>
+    <ProjectGuid>{A819F324-33A0-14D7-1CF4-D5A7DE8F2ED2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -47,12 +47,17 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Codigo\Boton.cs" />
+     <Compile Include="Assets\Codigo\BotonOpciones.cs" />
      <Compile Include="Assets\Codigo\Camarascript.cs" />
+     <Compile Include="Assets\Codigo\Controles.cs" />
+     <Compile Include="Assets\Codigo\Murcielago.cs" />
      <Compile Include="Assets\Codigo\Playboton.cs" />
+     <Compile Include="Assets\Codigo\Salir.cs" />
      <Compile Include="Assets\Codigo\Scroll\Pieza.cs" />
      <Compile Include="Assets\Codigo\Scroll\generadorniveles.cs" />
      <Compile Include="Assets\Codigo\personaje.cs" />
      <Compile Include="Assets\Codigo\transiciones.cs" />
+     <Compile Include="Assets\Volver.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

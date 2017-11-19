@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: a60bf27ff48f49e4caf7ffaf2e9822dc
-timeCreated: 1510669438
+timeCreated: 1511109130
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -18,7 +18,6 @@ TextureImporter:
     21300022: menu_11
     21300024: menu_12
     21300026: menu_13
-    21300028: menu_14
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -45,7 +44,7 @@ TextureImporter:
     filterMode: -1
     aniso: -1
     mipBias: -1
-    wrapMode: 0
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -105,6 +104,14 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -112,12 +119,12 @@ TextureImporter:
       name: menu_0
       rect:
         serializedVersion: 2
-        x: 75
-        y: 739
-        width: 487
-        height: 201
+        x: 1098
+        y: 1739
+        width: 490
+        height: 203
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -125,12 +132,12 @@ TextureImporter:
       name: menu_1
       rect:
         serializedVersion: 2
-        x: 657
-        y: 723
-        width: 467
-        height: 181
+        x: 1679
+        y: 1722
+        width: 469
+        height: 182
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -138,12 +145,12 @@ TextureImporter:
       name: menu_2
       rect:
         serializedVersion: 2
-        x: 1214
-        y: 740
-        width: 427
-        height: 184
+        x: 2237
+        y: 1738
+        width: 429
+        height: 188
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -151,12 +158,12 @@ TextureImporter:
       name: menu_3
       rect:
         serializedVersion: 2
-        x: 1735
-        y: 458
-        width: 166
-        height: 500
+        x: 2759
+        y: 1861
+        width: 502
+        height: 170
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -164,12 +171,12 @@ TextureImporter:
       name: menu_4
       rect:
         serializedVersion: 2
-        x: 81
-        y: 508
-        width: 427
-        height: 185
+        x: 1102
+        y: 1507
+        width: 431
+        height: 188
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -177,12 +184,25 @@ TextureImporter:
       name: menu_5
       rect:
         serializedVersion: 2
-        x: 635
-        y: 476
-        width: 499
-        height: 173
+        x: 1657
+        y: 1477
+        width: 503
+        height: 170
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: menu_6
+      rect:
+        serializedVersion: 2
+        x: 2215
+        y: 1494
+        width: 470
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -190,12 +210,12 @@ TextureImporter:
       name: menu_7
       rect:
         serializedVersion: 2
-        x: 1192
-        y: 496
-        width: 468
-        height: 164
+        x: 2808
+        y: 1414
+        width: 411
+        height: 176
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -203,12 +223,12 @@ TextureImporter:
       name: menu_8
       rect:
         serializedVersion: 2
-        x: 80
-        y: 276
-        width: 469
-        height: 164
+        x: 1104
+        y: 1276
+        width: 470
+        height: 166
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -216,12 +236,12 @@ TextureImporter:
       name: menu_9
       rect:
         serializedVersion: 2
-        x: 688
-        y: 244
-        width: 412
-        height: 173
+        x: 1713
+        y: 1244
+        width: 411
+        height: 176
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -229,12 +249,12 @@ TextureImporter:
       name: menu_10
       rect:
         serializedVersion: 2
-        x: 1174
-        y: 241
-        width: 467
-        height: 187
+        x: 2196
+        y: 1240
+        width: 471
+        height: 190
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -242,12 +262,12 @@ TextureImporter:
       name: menu_11
       rect:
         serializedVersion: 2
-        x: 1733
-        y: 24
-        width: 171
-        height: 409
+        x: 1084
+        y: 1041
+        width: 471
+        height: 191
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -255,12 +275,12 @@ TextureImporter:
       name: menu_12
       rect:
         serializedVersion: 2
-        x: 60
-        y: 43
-        width: 469
-        height: 189
+        x: 1658
+        y: 1048
+        width: 488
+        height: 184
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -268,25 +288,12 @@ TextureImporter:
       name: menu_13
       rect:
         serializedVersion: 2
-        x: 635
-        y: 30
-        width: 486
-        height: 200
+        x: 2201
+        y: 1039
+        width: 468
+        height: 181
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: menu_14
-      rect:
-        serializedVersion: 2
-        x: 1178
-        y: 40
-        width: 466
-        height: 180
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
