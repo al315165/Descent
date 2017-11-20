@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using System;
 
 public class personaje : MonoBehaviour {
 
@@ -11,13 +13,16 @@ public class personaje : MonoBehaviour {
     public float velocidadSubida;
     public generadorniveles generadorNcomp;
     public int escena;
-
+	private int puntuacion;
+	public Text textoPuntuacion;
+	private DatosGuardar datos;
     Animator animador;
 
 	void Awake()
 	{
 		generadorNcomp = GameObject.Find ("GeneradorNiveles").GetComponent<generadorniveles> ();
         animador = GetComponent<Animator>();
+		datos = GameObject.Find ("GuardadoDatos").GetComponent<DatosGuardar> ();
 	}
 
 
@@ -157,8 +162,13 @@ public class personaje : MonoBehaviour {
 			generadorNcomp.saliodenivel = true;
 			if (velocidad < 9.0f)
 				velocidad += 0.2f;
+			textoPuntuacion.text = Convert.ToString(Convert.ToInt32 (textoPuntuacion.text)+5);
 			break;
        case "enemigo" :
+				if ( Convert.ToInt32(textoPuntuacion.text)> datos.DarPuntuacion())
+				{
+					datos.Guardar (Convert.ToInt32 (textoPuntuacion.text));
+				}
                 SceneManager.LoadScene(escena);
                 break;
         }
