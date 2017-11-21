@@ -87,8 +87,10 @@ public class generadorniveles : MonoBehaviour {
 			Nivel = Instantiate (contenedorTransicion1Array [0]);
 		} else if (contadorniveles < 10) {
 			Nivel = Instantiate (contenedorNiveles2Array [numeroselectorNivel2]);
-		} else {
+		} else if (contadorniveles < 11) {
 			Nivel = Instantiate (contenedorTransicion2Array [0]);
+		} else {
+			Nivel = Instantiate (contenedorNiveles3Array [numeroselectorNivel3]);
 		}
 
 		Nivel.SetActive (true);
