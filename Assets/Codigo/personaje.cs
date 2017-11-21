@@ -17,6 +17,8 @@ public class personaje : MonoBehaviour {
 	public Text textoPuntuacion;
 	private DatosGuardar datos;
     Animator animador;
+	public int movimiento=0;
+	//0= nada, 1 = izq, 2 = der, 3 = sup, 4 = inf
 
 	void Awake()
 	{
@@ -36,7 +38,7 @@ public class personaje : MonoBehaviour {
         animador.SetBool("Right", false);
         animador.SetBool("Up", false);
         animador.SetBool("Down", false);
-        if (Input.GetKey(KeyCode.A) && this.transform.localPosition.x > -3.5f)
+		if (movimiento==1 && this.transform.localPosition.x > -3.5f)
         {
             
             animador.SetBool("Idle", false);
@@ -46,21 +48,21 @@ public class personaje : MonoBehaviour {
         }
        
 
-        if (Input.GetKey(KeyCode.D) && this.transform.localPosition.x < 3.5f)
+		if (movimiento==2 && this.transform.localPosition.x < 3.5f)
         {
             animador.SetBool("Idle", false);
             animador.SetBool("Right", true);
             this.transform.Translate(Time.deltaTime * velocidad, 0, 0);
         }
 
-        if (Input.GetKey(KeyCode.W) && this.transform.localPosition.y < -3.5f)
+		if (movimiento==3 && this.transform.localPosition.y < -3.5f)
         {
             animador.SetBool("Idle", false);
             animador.SetBool("Up", true);
             this.transform.Translate(0, Time.deltaTime * (velocidad/2), 0);
         }
 
-        if (Input.GetKey(KeyCode.S) && this.transform.localPosition.y > this.transform.localPosition.y - 3.5f)
+		if (movimiento==4 && this.transform.localPosition.y > this.transform.localPosition.y - 3.5f)
         {
             animador.SetBool("Idle", false);
             animador.SetBool("Down", true);
