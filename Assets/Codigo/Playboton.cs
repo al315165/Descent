@@ -14,7 +14,10 @@ public class Playboton : MonoBehaviour {
 	}
 	
 	void OnMouseDown(){
-		codigoPersonaje.velocidad = 6;
+		codigoPersonaje.velocidad =  4;
+		codigoPersonaje.velocidadMax = 6;
+		codigoPersonaje.velocidadMin = 2;
+		codigoPersonaje.jugable = true;
 		codigoPersonaje.posicion = 1;
 		this.gameObject.SetActive (false);
 	}

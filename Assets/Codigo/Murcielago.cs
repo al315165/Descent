@@ -4,7 +4,15 @@ using UnityEngine;
 
 public class Murcielago : MonoBehaviour {
     public float velocidadM;
+	personaje codigoPersonaje;
+
+	void Awake()
+	{
+		codigoPersonaje = GameObject.Find ("Protagonista").GetComponent<personaje> ();
+	}
     void Update () {
-        this.transform.Translate(0, Time.deltaTime * velocidadM, 0);
+
+		if (codigoPersonaje.jugable)
+        	this.transform.Translate(0, Time.deltaTime * velocidadM, 0);
     }
 }

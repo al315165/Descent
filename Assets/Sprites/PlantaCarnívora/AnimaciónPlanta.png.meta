@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 875c6f1d4a7d059488e75d78316e8217
-timeCreated: 1510618457
+timeCreated: 1511889425
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -31,6 +31,8 @@ TextureImporter:
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
@@ -46,10 +48,13 @@ TextureImporter:
   textureFormat: 1
   maxTextureSize: 2048
   textureSettings:
+    serializedVersion: 2
     filterMode: -1
     aniso: -1
     mipBias: -1
-    wrapMode: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -124,73 +129,80 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: "Animaci\xF3nPlanta_1"
       rect:
         serializedVersion: 2
-        x: 578
-        y: 4302
-        width: 858
-        height: 837
+        x: 371
+        y: 4303
+        width: 1074
+        height: 848
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: "Animaci\xF3nPlanta_2"
       rect:
         serializedVersion: 2
-        x: 716
-        y: 3466
-        width: 729
-        height: 830
+        x: 371
+        y: 3457
+        width: 1074
+        height: 848
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: "Animaci\xF3nPlanta_3"
       rect:
         serializedVersion: 2
-        x: 596
-        y: 2419
-        width: 839
-        height: 857
+        x: 371
+        y: 2444
+        width: 1074
+        height: 848
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: "Animaci\xF3nPlanta_4"
       rect:
         serializedVersion: 2
-        x: 467
-        y: 1495
-        width: 987
-        height: 817
+        x: 371
+        y: 1486
+        width: 1074
+        height: 848
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: "Animaci\xF3nPlanta_5"
       rect:
         serializedVersion: 2
-        x: 370
-        y: 517
-        width: 1064
-        height: 857
+        x: 371
+        y: 529
+        width: 1074
+        height: 848
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     outline: []
+    physicsShape: []
   spritePackingTag: 
   userData: 
   assetBundleName: 

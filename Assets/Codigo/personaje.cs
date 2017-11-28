@@ -8,174 +8,134 @@ using System;
 public class personaje : MonoBehaviour {
 
 	public float velocidad;
+	public float velocidadMax;
+	public float velocidadMin;
 	public int direccion;
 	public int posicion;
-    public float velocidadSubida;
-    public generadorniveles generadorNcomp;
-    public int escena;
+	public float velocidadSubida;
+	public generadorniveles generadorNcomp;
+	public int escena;
 	private int puntuacion;
 	public Text textoPuntuacion;
 	private DatosGuardar datos;
-    Animator animador;
-	public int movimiento=0;
-	//0= nada, 1 = izq, 2 = der, 3 = sup, 4 = inf
+	Animator animador;
+	Camarascript scriptCamara;
+	public bool jugable;
+
+	//salud
+	public Slider slidersalud;
+	private int salud= 100;
 
 	void Awake()
 	{
 		generadorNcomp = GameObject.Find ("GeneradorNiveles").GetComponent<generadorniveles> ();
-        animador = GetComponent<Animator>();
+		animador = GetComponent<Animator>();
 		datos = GameObject.Find ("GuardadoDatos").GetComponent<DatosGuardar> ();
+		scriptCamara = Camera.main.GetComponent<Camarascript> ();
+		jugable = false;
 	}
 
 
 	// Update is called once per frame
 	void Update () {
+
 		//activa siempre
-		this.transform.Translate (0, -Time.deltaTime * velocidad, 0);
+		if (jugable) {
+			this.transform.Translate (Vector2.down * velocidad * Time.deltaTime);
 
-        animador.SetBool("Idle", true);
-        animador.SetBool("Left", false);
-        animador.SetBool("Right", false);
-        animador.SetBool("Up", false);
-        animador.SetBool("Down", false);
-		if (movimiento==1 && this.transform.localPosition.x > -3.5f)
-        {
-            
-            animador.SetBool("Idle", false);
-            animador.SetBool("Left", true);
-            this.transform.Translate(-Time.deltaTime * velocidad, 0, 0);
-            
-        }
-       
+			animador.SetBool ("Idle", true);
+			animador.SetBool ("Left", false);
+			animador.SetBool ("Right", false);
+			animador.SetBool ("Up", false);
+			animador.SetBool ("Down", false);
+		}
+		if (Input.GetKey(KeyCode.A) && jugable && this.transform.position.x > -3.5f)
+		{
 
-		if (movimiento==2 && this.transform.localPosition.x < 3.5f)
-        {
-            animador.SetBool("Idle", false);
-            animador.SetBool("Right", true);
-            this.transform.Translate(Time.deltaTime * velocidad, 0, 0);
-        }
-
-		if (movimiento==3 && this.transform.localPosition.y < -3.5f)
-        {
-            animador.SetBool("Idle", false);
-            animador.SetBool("Up", true);
-            this.transform.Translate(0, Time.deltaTime * (velocidad/2), 0);
-        }
-
-		if (movimiento==4 && this.transform.localPosition.y > this.transform.localPosition.y - 3.5f)
-        {
-            animador.SetBool("Idle", false);
-            animador.SetBool("Down", true);
-            this.transform.Translate(0, -Time.deltaTime * (velocidad/2), 0);
-            
-        }
-
-    }
+			animador.SetBool("Idle", false);
+			animador.SetBool("Left", true);
+			this.transform.Translate(Vector2.left * velocidad * Time.deltaTime);
+		}
 
 
-    /*if (Input.GetKeyDown (KeyCode.A))
-        direccion = 1;
-    if (Input.GetKeyDown (KeyCode.D))
-        direccion = 2;
-    if (Input.GetKeyDown(KeyCode.W))
-        direccion = 3;
-    if (Input.GetKeyDown(KeyCode.S))
-        direccion = 4;*/
-    /*  switch (posicion) {
-  case 1:
-      if (direccion == 1) {
-          if (this.transform.localPosition.x > -3.5f)
-              this.transform.Translate (-Time.deltaTime * velocidad, 0, 0);
-          else {
-              direccion = 0;
-              posicion = 0;
-          }
+		if (Input.GetKey(KeyCode.D) && jugable && this.transform.position.x < 3.5f)
+		{
+			animador.SetBool("Idle", false);
+			animador.SetBool("Right", true);
+			this.transform.Translate(Vector2.right * velocidad * Time.deltaTime);
+		}
 
-      } else if (direccion == 2) {
-          if (this.transform.localPosition.x < 3.5f)
-              this.transform.Translate (Time.deltaTime * velocidad, 0, 0);
-          else {
-              posicion = 2;
-              direccion = 0;
-          }
-      }
-      break;
-  case 2:
-      if (direccion == 1) {
-          if (this.transform.localPosition.x > 0)
-              this.transform.Translate (-Time.deltaTime * velocidad, 0, 0);
-          else {
-              direccion = 0;
-              posicion = 1;
-          }
-      } else if (direccion == 2)
-          direccion = 0;
-      break;
-  case 3:
+		if (Input.GetKey(KeyCode.W) && jugable)
+		{
+			if (!Input.GetKey (KeyCode.A) && !Input.GetKey (KeyCode.D)) {
+				animador.SetBool ("Idle", false);
+				animador.SetBool ("Up", true);
+			}
+			if (velocidad > velocidadMin)
+				velocidad-= 2.0f;
+			Debug.Log ("pulsar");
 
-         if (direccion == 4)
-          {
-              if (this.transform.localPosition.y > -3.5f)
-                  this.transform.Translate(0, -Time.deltaTime * velocidad, 0);
-              else {
-                  direccion = 0;
-                  posicion = 4;
-              }
-          }
-          else if (direccion == 3)
-              direccion = 0;
-          break;
+		}
+		if (!Input.GetKey (KeyCode.W) && velocidad== velocidadMin && jugable) {
+			velocidad+=2.0f;
+			Debug.Log ("soltar");
+		}
 
-   case 4:
-          if (direccion == 3)
-          {
-              if (this.transform.localPosition.y < 3.5f)
-                  this.transform.Translate(0, Time.deltaTime * velocidad, 0);
-              else {
-                  direccion = 0;
-                  posicion = 3;
-              }
-          }
-          else if (direccion == 4)
-              direccion = 0;
-          break;
-
-    case 0:
-      if (direccion == 2) {
-          if (this.transform.localPosition.x < 0)
-              this.transform.Translate (Time.deltaTime * velocidad, 0, 0);
-          else {
-              direccion = 0;
-              posicion = 1;
-          }
-      } else if (direccion == 1)
-          direccion = 0;
-      break;
-  }*/
+		if (Input.GetKey(KeyCode.S) && jugable)
+		{
+			if (!Input.GetKey (KeyCode.A) && !Input.GetKey (KeyCode.D)) {
+				animador.SetBool ("Idle", false);
+				animador.SetBool ("Down", true);
+			}
+			if (velocidad < velocidadMax)
+				velocidad+=2.0f;
+		}
+		if (!Input.GetKey (KeyCode.S) && velocidad == velocidadMax && jugable) {
+			velocidad-=2.0f;
+		}
+	}
 
 
 
-
-    void OnTriggerEnter(Collider other)
+	void OnTriggerEnter(Collider other)
 	{
 		switch (other.tag) {
 		case "generanivel":
 			Debug.Log ("genera");
 			generadorNcomp.saliodenivel = true;
-			if (velocidad < 9.0f)
-				velocidad += 0.2f;
+			if (velocidad < 7.0f) {
+				velocidad += 0.1f;
+				velocidadMax += 0.1f;
+				velocidadMin += 0.1f;
+			}
 			textoPuntuacion.text = Convert.ToString(Convert.ToInt32 (textoPuntuacion.text)+5);
 			break;
-       case "enemigo" :
+		case "enemigo":
+			Enemigo scriptEnemigo = other.GetComponent<Enemigo> ();
+			scriptEnemigo.MostrarGolpe ();
+			if (salud > 0) {
+				if (scriptEnemigo.tipoPersonaje == Enemigo.tipo.debil) {
+					salud -= 15;
+					slidersalud.value -= 15;
+				} else if (scriptEnemigo.tipoPersonaje == Enemigo.tipo.medio) {
+					salud -= 25;
+					slidersalud.value -= 25;
+				} else if (scriptEnemigo.tipoPersonaje == Enemigo.tipo.fuerte) {
+					salud -= 50;
+					slidersalud.value -= 50;
+				}
+			}
+			if (salud <= 0) {
 				if ( Convert.ToInt32(textoPuntuacion.text)> datos.DarPuntuacion())
 				{
 					datos.Guardar (Convert.ToInt32 (textoPuntuacion.text));
 				}
-                SceneManager.LoadScene(escena);
-                break;
-        }
+				SceneManager.LoadScene(escena);
+			}
+			break;
+		}
 	}
 
-   
+
 
 }

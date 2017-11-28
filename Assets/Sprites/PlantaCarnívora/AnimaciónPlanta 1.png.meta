@@ -1,0 +1,262 @@
+fileFormatVersion: 2
+guid: 453ef33f9b208ee409bf6b6b8f19371e
+timeCreated: 1511889672
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: "Animaci\xF3nPlanta 1_1"
+    21300002: "Animaci\xF3nPlanta 1_2"
+    21300004: "Animaci\xF3nPlanta 1_5"
+    21300006: "Animaci\xF3nPlanta 1_7"
+    21300008: "Animaci\xF3nPlanta 1_8"
+    21300010: "Animaci\xF3nPlanta 1_11"
+    21300012: "Animaci\xF3nPlanta 1_12"
+    21300014: "Animaci\xF3nPlanta 1_0"
+    21300016: "Animaci\xF3nPlanta 1_3"
+    21300018: "Animaci\xF3nPlanta 1_4"
+    21300020: "Animaci\xF3nPlanta 1_6"
+    21300022: "Animaci\xF3nPlanta 1_9"
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Animaci\xF3nPlanta 1_1"
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 5124
+        width: 184
+        height: 836
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "Animaci\xF3nPlanta 1_2"
+      rect:
+        serializedVersion: 2
+        x: 1317
+        y: 5184
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "Animaci\xF3nPlanta 1_5"
+      rect:
+        serializedVersion: 2
+        x: 1797
+        y: 5091
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "Animaci\xF3nPlanta 1_7"
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 4182
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "Animaci\xF3nPlanta 1_8"
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 3755
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "Animaci\xF3nPlanta 1_11"
+      rect:
+        serializedVersion: 2
+        x: 1094
+        y: 2307
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "Animaci\xF3nPlanta 1_12"
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 3176
+        width: 1236
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "Animaci\xF3nPlanta 1_0"
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 2495
+        width: 1236
+        height: 558
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "Animaci\xF3nPlanta 1_3"
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 1758
+        width: 1236
+        height: 558
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "Animaci\xF3nPlanta 1_4"
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 3821
+        width: 1236
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "Animaci\xF3nPlanta 1_6"
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 4540
+        width: 1236
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "Animaci\xF3nPlanta 1_9"
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 5284
+        width: 1236
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
