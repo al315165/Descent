@@ -13,6 +13,8 @@ TagManager:
   - generanivel
   - enemigo
   - nivelcuarto
+  - nivelquinto
+  - transicion4
   - transicion3
   layers:
   - Default

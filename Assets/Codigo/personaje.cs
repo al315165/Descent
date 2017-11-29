@@ -126,11 +126,12 @@ public class personaje : MonoBehaviour {
 				}
 			}
 			if (salud <= 0) {
-				if ( Convert.ToInt32(textoPuntuacion.text)> datos.DarPuntuacion())
+				/*if ( Convert.ToInt32(textoPuntuacion.text)> datos.DarPuntuacion())
 				{
 					datos.Guardar (Convert.ToInt32 (textoPuntuacion.text));
 				}
 				SceneManager.LoadScene(escena);
+				*/
 			}
 			break;
 		}
