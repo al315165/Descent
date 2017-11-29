@@ -11,7 +11,12 @@ public class generadorniveles : MonoBehaviour {
 	public GameObject[] contenedorTransicion1Array;
 	public GameObject[] contenedorTransicion2Array;
 
-	public GameObject Nivel;
+    //Fondos agregados Jose
+    public GameObject[] contenedorNiveles4Array;
+    public GameObject[] contenedorTransicion3Array;
+    int numeroselectorNivel4;
+
+    public GameObject Nivel;
 
 	public int contadorniveles=0;
 	int contadorcontenedor = 0;
@@ -51,14 +56,23 @@ public class generadorniveles : MonoBehaviour {
 
 		contenedorNiveles1Array = GameObject.FindGameObjectsWithTag ("nivelprimero");
 		contenedorNiveles2Array = GameObject.FindGameObjectsWithTag ("nivelsegundo");
-		contenedorNiveles3Array = GameObject.FindGameObjectsWithTag ("niveltercero");
+		contenedorNiveles3Array = GameObject.FindGameObjectsWithTag ("niveltercero"); 
 		contenedorTransicion1Array = GameObject.FindGameObjectsWithTag ("transicion1");
 		contenedorTransicion2Array = GameObject.FindGameObjectsWithTag ("transicion2");
-		HacerHijos (contenedorNiveles1Array);
+        
+        //Fondos Agregados Jose
+        contenedorNiveles4Array = GameObject.FindGameObjectsWithTag("nivelcuarto");
+        contenedorTransicion3Array = GameObject.FindGameObjectsWithTag("transicion3");
+
+        HacerHijos (contenedorNiveles1Array);
 		HacerHijos (contenedorNiveles2Array);
 		HacerHijos (contenedorNiveles3Array);
 		HacerHijos (contenedorTransicion1Array);
 		HacerHijos (contenedorTransicion2Array);
+
+        //Hacer hijos Jose
+        HacerHijos(contenedorNiveles4Array);
+        HacerHijos(contenedorTransicion3Array);
 
 		CrearNiveles ();
 	}
@@ -81,6 +95,9 @@ public class generadorniveles : MonoBehaviour {
 		numeroselectorNivel2 = Random.Range (0, contenedorNiveles2Array.Length);
 		numeroselectorNivel3 = Random.Range (0, contenedorNiveles3Array.Length);
 
+        //Jose
+        numeroselectorNivel4 = Random.Range (0, contenedorNiveles4Array.Length);
+        //
 		if (contadorniveles < 5) {
 			Nivel = Instantiate (contenedorNiveles1Array [numeroselectorNivel1]);
 		} else if (contadorniveles < 6) {
@@ -89,9 +106,18 @@ public class generadorniveles : MonoBehaviour {
 			Nivel = Instantiate (contenedorNiveles2Array [numeroselectorNivel2]);
 		} else if (contadorniveles < 11) {
 			Nivel = Instantiate (contenedorTransicion2Array [0]);
-		} else {
+		} //Era un else solo antes de Jose 
+        else if(contadorniveles<12) {
 			Nivel = Instantiate (contenedorNiveles3Array [numeroselectorNivel3]);
 		}
+        //Codigo Niveles Jose
+        else if(contadorniveles<13){
+            Nivel = Instantiate(contenedorTransicion3Array[0]);
+        }
+        else
+        {
+            Nivel = Instantiate(contenedorNiveles4Array[numeroselectorNivel4]);
+        }
 
 		Nivel.SetActive (true);
 		Nivel.name = "Nivel" + contadorniveles;

@@ -12,6 +12,8 @@ TagManager:
   - nivel
   - generanivel
   - enemigo
+  - nivelcuarto
+  - transicion3
   layers:
   - Default
   - TransparentFX
